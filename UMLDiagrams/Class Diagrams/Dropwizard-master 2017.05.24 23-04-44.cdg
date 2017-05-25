@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Dropwizard-master">
+  <ClassDiagramComponents>
+    <Class name="CheckLogin" package="sk.fri.uniza.microservice" visibility="public" xPosition="1450.0" yPosition="770.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getStart" returnType="CheckLoginView" visibility="public"/>
+        <Method name="getSign" returnType="CheckLoginView" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CheckLoginView" package="sk.fri.uniza.microservice" visibility="public" xPosition="1708.0" yPosition="770.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Choose" package="sk.fri.uniza.microservice" visibility="public" xPosition="1450.0" yPosition="1045.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getStart" returnType="ChooseView" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ChooseView" package="sk.fri.uniza.microservice" visibility="public" xPosition="1708.0" yPosition="1045.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Control" package="sk.fri.uniza.microservice" visibility="public" xPosition="1450.0" yPosition="513.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getTemp" returnType="ControlView" visibility="public"/>
+        <Method name="getPressure" returnType="ControlView" visibility="public"/>
+        <Method name="getLevel" returnType="ControlView" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ControlView" package="sk.fri.uniza.microservice" visibility="public" xPosition="1708.0" yPosition="513.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="c"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="HelloWorldApplication" package="sk.fri.uniza.microservice" visibility="public" xPosition="1031.0" yPosition="219.0">
+      <Fields>
+        <Field name="buildSessionFactory" type="SessionFactory" visibility="package" isStatic="true"/>
+        <Field name="portNumber" type="int" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="Bootstrap&lt;HelloWorldConfiguration&gt;" name="bootstrap"/>
+        </Method>
+        <Method name="run" returnType="void" visibility="public">
+          <Argument type="HelloWorldConfiguration" name="configuration"/>
+          <Argument type="Environment" name="environment"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HelloWorldConfiguration" package="sk.fri.uniza.microservice" visibility="public" xPosition="1590.0" yPosition="219.0">
+      <Fields>
+        <Field name="template" type="String" visibility="private"/>
+        <Field name="defaultName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getTemplate" returnType="String" visibility="public"/>
+        <Method name="setTemplate" returnType="void" visibility="public">
+          <Argument type="String" name="template"/>
+        </Method>
+        <Method name="getDefaultName" returnType="String" visibility="public"/>
+        <Method name="setDefaultName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HelloWorldResource" package="sk.fri.uniza.microservice" visibility="public" xPosition="516.0" yPosition="181.0">
+      <Fields>
+        <Field name="template" type="String" visibility="private" isFinal="true"/>
+        <Field name="defaultName" type="String" visibility="private" isFinal="true"/>
+        <Field name="counter" type="AtomicLong" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="template"/>
+          <Argument type="String" name="defaultName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="sayHello" returnType="List&lt;Temp&gt;" visibility="public">
+          <Argument type="Optional&lt;String&gt;" name="name"/>
+        </Method>
+        <Method name="sayHello" returnType="Temp" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="sayHello" returnType="Temp" visibility="public">
+          <Argument type="Temp" name="input"/>
+        </Method>
+        <Method name="setPressure" returnType="Pressure" visibility="public">
+          <Argument type="Pressure" name="input"/>
+        </Method>
+        <Method name="setLevel" returnType="Level" visibility="public">
+          <Argument type="Level" name="input"/>
+        </Method>
+        <Method name="setUser" returnType="User" visibility="public">
+          <Argument type="User" name="input"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Level" package="sk.fri.uniza.microservice" visibility="public" xPosition="69.0" yPosition="513.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="content" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="content"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="getContent" returnType="String" visibility="public"/>
+        <Method name="setContent" returnType="void" visibility="public">
+          <Argument type="String" name="content"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LevelResource" package="sk.fri.uniza.microservice" visibility="public" xPosition="22.0" yPosition="1147.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getLevel" returnType="LevelView" visibility="public">
+          <Argument type="Optional&lt;String&gt;" name="name"/>
+        </Method>
+        <Method name="getLevel" returnType="LevelView" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="deletePressure" returnType="Response" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="deleteTemp" returnType="Response" visibility="public">
+          <Argument type="Optional&lt;String&gt;" name="name"/>
+        </Method>
+        <Method name="newLevel" returnType="Response" visibility="public">
+          <Argument type="String" name="level"/>
+        </Method>
+        <Method name="upLevel" returnType="Response" visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="level"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LevelView" package="sk.fri.uniza.microservice" visibility="public" xPosition="63.0" yPosition="830.0">
+      <Fields>
+        <Field name="level" type="Level" visibility="private"/>
+        <Field name="listLevel" type="List&lt;Level&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Level" name="person"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Level&gt;" name="listLevel"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getLevel" returnType="Level" visibility="public"/>
+        <Method name="getListLevel" returnType="List&lt;Level&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pressure" package="sk.fri.uniza.microservice" visibility="public" xPosition="1149.0" yPosition="513.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="content" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="content"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="getContent" returnType="String" visibility="public"/>
+        <Method name="setContent" returnType="void" visibility="public">
+          <Argument type="String" name="content"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PressureResource" package="sk.fri.uniza.microservice" visibility="public" xPosition="1096.0" yPosition="1147.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getPressure" returnType="PressureView" visibility="public">
+          <Argument type="Optional&lt;String&gt;" name="name"/>
+        </Method>
+        <Method name="getPressure" returnType="PressureView" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="deletePressure" returnType="Response" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="deleteTemp" returnType="Response" visibility="public">
+          <Argument type="Optional&lt;String&gt;" name="name"/>
+        </Method>
+        <Method name="newPressure" returnType="Response" visibility="public">
+          <Argument type="String" name="pressure"/>
+        </Method>
+        <Method name="upPressure" returnType="Response" visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="pressure"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PressureView" package="sk.fri.uniza.microservice" visibility="public" xPosition="1117.0" yPosition="849.0">
+      <Fields>
+        <Field name="pressure" type="Pressure" visibility="private"/>
+        <Field name="listPressure" type="List&lt;Pressure&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Pressure" name="person"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Pressure&gt;" name="listPressure"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPressure" returnType="Pressure" visibility="public"/>
+        <Method name="getListPressure" returnType="List&lt;Pressure&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Temp" package="sk.fri.uniza.microservice" visibility="public" xPosition="414.0" yPosition="513.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="content" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="content"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="getContent" returnType="String" visibility="public"/>
+        <Method name="setContent" returnType="void" visibility="public">
+          <Argument type="String" name="content"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TemplateHealthCheck" package="sk.fri.uniza.microservice" visibility="public" xPosition="70.0" yPosition="238.0">
+      <Fields>
+        <Field name="template" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="template"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="check" returnType="Result" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="TempResource" package="sk.fri.uniza.microservice" visibility="public" xPosition="367.0" yPosition="1147.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getTemp" returnType="TempView" visibility="public">
+          <Argument type="Optional&lt;String&gt;" name="name"/>
+        </Method>
+        <Method name="getTemp" returnType="TempView" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="deleteTemp" returnType="Response" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="deleteTemp" returnType="Response" visibility="public">
+          <Argument type="Optional&lt;String&gt;" name="name"/>
+        </Method>
+        <Method name="newTemp" returnType="Response" visibility="public">
+          <Argument type="String" name="temp"/>
+        </Method>
+        <Method name="upTemp" returnType="Response" visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="temp"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TempView" package="sk.fri.uniza.microservice" visibility="public" xPosition="404.0" yPosition="816.0">
+      <Fields>
+        <Field name="temp" type="Temp" visibility="private"/>
+        <Field name="listTemp" type="List&lt;Temp&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Temp" name="person"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Temp&gt;" name="listSaying"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTemp" returnType="Temp" visibility="public"/>
+        <Method name="getListTemp" returnType="List&lt;Temp&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="User" package="sk.fri.uniza.microservice" visibility="public" xPosition="735.0" yPosition="513.0">
+      <Fields>
+        <Field name="id" type="long" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="long" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="long" name="id"/>
+        </Method>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UserResource" package="sk.fri.uniza.microservice" visibility="public" xPosition="692.0" yPosition="1166.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getSaying" returnType="UserView" visibility="public">
+          <Argument type="Optional&lt;String&gt;" name="name"/>
+        </Method>
+        <Method name="getSaying" returnType="UserView" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="upUser" returnType="Response" visibility="public">
+          <Argument type="long" name="id"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="pswNew"/>
+        </Method>
+        <Method name="makeLogin" returnType="Response" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="psw"/>
+        </Method>
+        <Method name="makeSign" returnType="Response" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="psw"/>
+          <Argument type="String" name="psw2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UserView" package="sk.fri.uniza.microservice" visibility="public" xPosition="771.0" yPosition="869.0">
+      <Fields>
+        <Field name="user" type="User" visibility="private"/>
+        <Field name="listUser" type="List&lt;User&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="User" name="person"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="List&lt;User&gt;" name="listUser"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getUser" returnType="User" visibility="public"/>
+        <Method name="getListUser" returnType="List&lt;User&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="pressure" source="sk.fri.uniza.microservice.PressureView" target="sk.fri.uniza.microservice.Pressure" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listLevel" source="sk.fri.uniza.microservice.LevelView" target="sk.fri.uniza.microservice.Level" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Level&gt;"/>
+    <UseRelation source="sk.fri.uniza.microservice.UserResource" target="sk.fri.uniza.microservice.UserView" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.LevelView" target="sk.fri.uniza.microservice.Level" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.Choose" target="sk.fri.uniza.microservice.ChooseView" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.Control" target="sk.fri.uniza.microservice.ControlView" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.HelloWorldResource" target="sk.fri.uniza.microservice.Pressure" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listPressure" source="sk.fri.uniza.microservice.PressureView" target="sk.fri.uniza.microservice.Pressure" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Pressure&gt;"/>
+    <UseRelation source="sk.fri.uniza.microservice.LevelResource" target="sk.fri.uniza.microservice.LevelView" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.TempView" target="sk.fri.uniza.microservice.Temp" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.PressureResource" target="sk.fri.uniza.microservice.PressureView" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.HelloWorldApplication" target="sk.fri.uniza.microservice.HelloWorldConfiguration" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.UserView" target="sk.fri.uniza.microservice.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.CheckLogin" target="sk.fri.uniza.microservice.CheckLoginView" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.HelloWorldResource" target="sk.fri.uniza.microservice.Level" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.TempResource" target="sk.fri.uniza.microservice.TempView" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.HelloWorldResource" target="sk.fri.uniza.microservice.User" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="user" source="sk.fri.uniza.microservice.UserView" target="sk.fri.uniza.microservice.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listUser" source="sk.fri.uniza.microservice.UserView" target="sk.fri.uniza.microservice.User" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;User&gt;"/>
+    <HasRelation name="level" source="sk.fri.uniza.microservice.LevelView" target="sk.fri.uniza.microservice.Level" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="temp" source="sk.fri.uniza.microservice.TempView" target="sk.fri.uniza.microservice.Temp" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listTemp" source="sk.fri.uniza.microservice.TempView" target="sk.fri.uniza.microservice.Temp" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Temp&gt;"/>
+    <UseRelation source="sk.fri.uniza.microservice.HelloWorldResource" target="sk.fri.uniza.microservice.Temp" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="sk.fri.uniza.microservice.PressureView" target="sk.fri.uniza.microservice.Pressure" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
